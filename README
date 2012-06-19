@@ -1,7 +1,16 @@
 Installation:
 
     git clone git://github.com/aaronlin/vimrc.git ~/.vim
+    cd .vim
+    git submodule init
+    git submodule update
 
 Create symlinks:
 
     ln -s ~/.vim/vimrc ~/.vimrc
+
+Add a new plugin:
+
+    git submodule add [git_url] bundle/[plugin_name]
+    git commit -m "[comment]"
+    git push
