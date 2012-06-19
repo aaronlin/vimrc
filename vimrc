@@ -16,8 +16,6 @@ set fileencodings=utf-8,cp950,gb2312,big5,ucs-bom
 syntax on
 set autoindent
 set smartindent
-set smarttab
-set smartcase
 set hlsearch
 set nocompatible
 set history=50

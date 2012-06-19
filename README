@@ -14,3 +14,7 @@ Add a new plugin:
     git submodule add [git_url] bundle/[plugin_name]
     git commit -m "[comment]"
     git push
+
+Update submodule
+
+    git submodule update
