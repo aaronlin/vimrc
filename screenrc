@@ -1,0 +1,16 @@
+# 設定每個視窗的標題
+caption always "%{= wk} %{= KY} [%n]%t @ %H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+
+# 設定總是顯示 screen 的狀態列
+hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+
+# 設定預設的文字編碼
+defencoding utf8
+
+# 設定 C-a b 後可看直接看到 big-5 編碼的文字，不用再切換 pietty 的字元編碼設定
+bind b encoding big5 utf8 # convert big5 to utf8
+# C-a u 後切回可以直看 utf-8 編碼的文字，不用再切換 pietty 的字元編碼設定
+bind u encoding utf8 utf8
+
+# 設定視窗回捲時可看到的行數
+defscrollback 2048
