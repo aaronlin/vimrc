@@ -31,7 +31,7 @@ colorscheme torte
 
 " set the behaviors of tab and expand tab
 
-set shiftwidth=2
+set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
