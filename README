@@ -1,6 +1,21 @@
+ONE-STEP INSTALL
+----------------
+
+wget (for most Unix)
+
+    wget -O - https://raw.github.com/vgod/vimrc/master/auto-install.sh | sh
+
+or curl (for MAC OSX)
+
+    curl -o - https://raw.github.com/vgod/vimrc/master/auto-install.sh | sh
+
+
+MANUALLY INSTALL
+----------------
+
 Installation:
 
-    git clone git://github.com/aaronlin/vimrc.git ~/.vim
+    git clone https://github.com/aaronlin/vimrc ~/.vim
     cd .vim
     git submodule init
     git submodule update
