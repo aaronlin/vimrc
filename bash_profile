@@ -8,7 +8,7 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 # set these for overcoming some warnings in brew doctor
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-# git settings
+# command line coloring for git
 function git_branch {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
     echo "("${ref#refs/heads/}") ";
@@ -26,6 +26,9 @@ function git_since_last_commit {
 }
 
 PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033[0;33m\]\$(git_since_last_commit)\[\033[0m\]$ " 
+
+# git autocomplete
+[ -f ~/.vim/git-bash-completion.sh ] && . ~/.vim/git-bash-completion.sh
 
 # alias setting
 alias ls='ls -GhF'

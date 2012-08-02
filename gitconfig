@@ -1,0 +1,12 @@
+[user]
+	name = aaronlin
+	email = aaronlin@kkbox.com
+[color]
+	ui = true
+[merge]
+	tool = opendiff
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
