@@ -25,6 +25,7 @@ set autoread
 set showmatch
 set showmode
 set nobackup
+set cursorline
 colorscheme torte
 
 
@@ -41,7 +42,7 @@ set expandtab
 " autocomplete
 
 filetype plugin indent on
-let g:pydiction_location = '/Users/vagante/.vim/bundle/pydiction/complete-dict' 
+let g:pydiction_location = '/Users/aaronlin/.vim/bundle/pydiction/complete-dict' 
 
 
 

@@ -32,7 +32,7 @@ PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033
 
 # alias setting
 alias ls='ls -GhF'
-alias rm='rm -i'
+#alias rm='rm -i'
 alias cp='cp -i'
 alias mkdir='mkdir -p'
 
