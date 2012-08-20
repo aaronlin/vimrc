@@ -10,3 +10,17 @@
 	ci = commit
 	st = status
 	br = branch
+    rt = reset --hard
+    unstage = reset HEAD
+    uncommit = reseet --soft HEAD^
+    l = log --pretty=oneline --abbrev-commit --graph --decorate
+    g = grep -n --color -E
+    nb = checkout -b
+    # 'git add -u' add only removed files
+    # 'git add .' add only modified and added files
+    # 'git addall' add both of above
+    addall = !sh -c 'git add . && git add -u'
+[push]
+    # only push branches that have been
+    # set up to track a remote branch.
+    default = current
