@@ -20,6 +20,7 @@
     # 'git add .' add only modified and added files
     # 'git addall' add both of above
     addall = !sh -c 'git add . && git add -u'
+    merge = merge -e
 [push]
     # only push branches that have been
     # set up to track a remote branch.
