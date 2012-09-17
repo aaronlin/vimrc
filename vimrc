@@ -44,6 +44,9 @@ set expandtab
 filetype plugin indent on
 let g:pydiction_location = '/Users/aaronlin/.vim/bundle/pydiction/complete-dict' 
 
+" NERDTree setting
+
+map <F2> :NERDTreeToggle<CR>
 
 
 " vgod's setting
