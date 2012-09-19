@@ -1,15 +1,15 @@
 [user]
-	name = aaronlin
-	email = aaronlin@kkbox.com
+    name = aaronlin
+    email = aaronlin@kkbox.com
 [color]
-	ui = true
+    ui = true
 [merge]
-	tool = opendiff
+    tool = opendiff
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	br = branch
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
     rt = reset --hard
     unstage = reset HEAD
     uncommit = reseet --soft HEAD^
@@ -27,4 +27,4 @@
     # set up to track a remote branch.
     default = current
 [core]
-	editor = vim
+    editor = vim
