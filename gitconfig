@@ -16,6 +16,8 @@
     l = log --pretty=oneline --abbrev-commit --graph --decorate
     g = grep -n --color -E
     nb = checkout -b
+    amend = commit --amend
+    who = shortlog -n -s --no-merges
     # 'git add -u' add only removed files
     # 'git add .' add only modified and added files
     # 'git addall' add both of above
@@ -28,3 +30,4 @@
     default = current
 [core]
     editor = vim
+	autocrlf = input
