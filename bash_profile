@@ -1,3 +1,7 @@
+# set java home for hadoop
+JAVA_HOME=/usr
+export JAVA_HOME
+
 # set these for numpy
 PYTHONPATH="/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
@@ -42,3 +46,8 @@ alias path='echo -e ${PATH//:/\\n}'
 alias df='df -kh'
 
 
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
