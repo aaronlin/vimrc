@@ -1,16 +1,33 @@
 # set java home for hadoop
-JAVA_HOME=/usr
-export JAVA_HOME
+export JAVA_HOME="/usr"
 
-# set these for numpy
-PYTHONPATH="/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/"
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+if [ "$TERM" != "dumb" ]; then
+    if [ $(uname) == "Linux" ]; then
+        # Linux
+        alias ls='ls --color=auto'
+        LS_COLORS='di=33:fi=0:ln=95:pi=5:so=5:cd=5:or=37:mi=0:ex=31'
+    else
+        # OS X
+        alias ls='ls -GhF'
+        export LSCOLORS=dxfxcxdxbxegedabagacad
+        
+        # set these for numpy
+        PYTHONPATH="/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/"
+        export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+        
+        # for brew settings
+        . $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 
-# for brew settings
-. $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+        # set these for overcoming some warnings in brew doctor
+        export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-# set these for overcoming some warnings in brew doctor
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+        # Setting PATH for Python 2.7
+        # The orginal version is saved in .bash_profile.pysave
+        export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+    fi
+    export CLICOLOR=1
+fi
+
 
 # command line coloring for git
 function git_branch {
@@ -35,8 +52,7 @@ PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033
 [ -f ~/.vim/git-bash-completion.sh ] && . ~/.vim/git-bash-completion.sh
 
 # alias setting
-alias ls='ls -GhF'
-#alias rm='rm -i'
+alias rm='rm -i'
 alias cp='cp -i'
 alias mkdir='mkdir -p'
 
@@ -47,7 +63,3 @@ alias df='df -kh'
 
 
 
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
