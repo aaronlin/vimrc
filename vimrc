@@ -27,7 +27,7 @@ set showmode
 set nobackup
 set cursorline
 colorscheme torte
-
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 
 " set the behaviors of tab and expand tab
