@@ -37,7 +37,12 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 
-
+" set hlresearch behaviors
+autocmd cursorhold * set nohlsearch
+noremap n :set hlsearch<cr>n
+noremap N :set hlsearch<cr>N
+noremap / :set hlsearch<cr>/
+noremap ? :set hlsearch<cr>?
 
 " autocomplete
 
