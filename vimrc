@@ -28,7 +28,7 @@ set nobackup
 set cursorline
 colorscheme torte
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-
+let python_highlight_all=1
 
 " set the behaviors of tab and expand tab
 
