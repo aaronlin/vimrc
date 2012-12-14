@@ -1,18 +1,9 @@
-" pathogen running script
-
-call pathogen#infect() 
-
-
 " set encodings
-
 set encoding=utf8
 set termencoding=utf8
 set fileencodings=utf-8,cp950,gb2312,big5,ucs-bom
 
-
-
 " vim setting
-
 syntax on
 set autoindent
 set smartindent
@@ -26,15 +17,32 @@ set showmatch
 set showmode
 set nobackup
 set cursorline
-colorscheme torte
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set colorcolumn=80
+highlight ColorColumn ctermbg=233
+
+" python highlight on
 let python_highlight_all=1
 
-" set the behaviors of tab and expand tab
+" use apple+click to jump cursor by mouse
+set mouse=a
 
+" automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc source %
+
+" better copy and paste # need to be examined!
+set pastetoggle=<F2>
+set clipboard=unnamed
+
+" easier moving of code blocks
+vnoremap < <gv
+vnoremap > >gv
+
+" set the behaviors of tab and expand tab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
+set shiftround
 set expandtab
 
 " set hlresearch behaviors
@@ -44,15 +52,11 @@ noremap N :set hlsearch<cr>N
 noremap / :set hlsearch<cr>/
 noremap ? :set hlsearch<cr>?
 
-" autocomplete
-
-filetype plugin indent on
-let g:pydiction_location = '/Users/aaronlin/.vim/bundle/pydiction/complete-dict' 
-
-" NERDTree setting
-
-map <F2> :NERDTreeToggle<CR>
-
+" Show whitespace
+" MUST be inserted BEFORE the colorscheme command
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
+colorscheme torte
 
 " vgod's setting
 " --- move around splits {
@@ -68,7 +72,6 @@ set wmw=0                     " set the min width of a window to 0 so we can max
 set wmh=0                     " set the min height of a window to 0 so we can maximize others
 " }
 
-
 " move around tabs. conflict with the original screen top/bottom
 " comment them out if you want the original H/L
 " go to prev tab 
@@ -80,3 +83,16 @@ map <S-L> gt
 map <C-t><C-t> :tabnew<CR>
 " close tab
 map <C-t><C-w> :tabclose<CR>
+
+
+
+" set up pathogen first to manage vim plugins
+call pathogen#infect() 
+
+" python autocomplete
+filetype plugin indent on
+let g:pydiction_location = '/Users/aaronlin/.vim/bundle/pydiction/complete-dict' 
+
+" NERDTree setting
+map <F3> :NERDTreeToggle<CR>
+
