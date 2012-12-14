@@ -12,6 +12,7 @@ set nocompatible
 set history=50
 set ruler
 set number
+set bs=2
 set autoread
 set showmatch
 set showmode
@@ -21,10 +22,13 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
 
+" rebind Leader key
+let mapleader = ","
+
 " python highlight on
 let python_highlight_all=1
 
-" use apple+click to jump cursor by mouse
+" use click to jump cursor by mouse
 set mouse=a
 
 " automatic reloading of .vimrc
@@ -60,21 +64,21 @@ colorscheme torte
 
 " vgod's setting
 " --- move around splits {
-" move to and maximize the below split 
+" move to and maximize the below split
 map <C-J> <C-W>j<C-W>_
-" move to and maximize the above split 
+" move to and maximize the above split
 map <C-K> <C-W>k<C-W>_
-" move to and maximize the left split 
+" move to and maximize the left split
 nmap <c-h> <c-w>h<c-w><bar>
-" move to and maximize the right split  
+" move to and maximize the right split
 nmap <c-l> <c-w>l<c-w><bar>
-set wmw=0                     " set the min width of a window to 0 so we can maximize others 
+set wmw=0                     " set the min width of a window to 0 so we can maximize others
 set wmh=0                     " set the min height of a window to 0 so we can maximize others
 " }
 
 " move around tabs. conflict with the original screen top/bottom
 " comment them out if you want the original H/L
-" go to prev tab 
+" go to prev tab
 map <S-H> gT
 " go to next tab
 map <S-L> gt
@@ -87,12 +91,31 @@ map <C-t><C-w> :tabclose<CR>
 
 
 " set up pathogen first to manage vim plugins
-call pathogen#infect() 
+call pathogen#infect()
+
+" settings for ctrlp
+let g:ctrlp_max_height = 30
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+set wildignore+=*/coverage/*
 
 " python autocomplete
 filetype plugin indent on
-let g:pydiction_location = '/Users/aaronlin/.vim/bundle/pydiction/complete-dict' 
+"let g:pydiction_location = '/Users/aaronlin/.vim/bundle/pydiction/complete-dict'
 
-" NERDTree setting
+" settings for NERDTree
 map <F3> :NERDTreeToggle<CR>
 
+" settings for python-mode
+map <Leader>g :call RopeGotoDefinition()<CR>
+let ropevim_enable_shortcuts = 1
+let g:pymode_rope_goto_def_newwin = "vnew"
+let g:pymode_rope_extended_complete = 1
+let g:pymode_breakpoint = 0
+let g:pymode_syntax = 1
+let g:pymode_syntax_builtin_objs = 0
+let g:pymode_syntax_builtin_funcs = 0
+map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+
+" settings for python folding
+set nofoldenable
