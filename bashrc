@@ -1,3 +1,6 @@
+# add path for matlab
+export PATH="$PATH:/usr/local/MATLAB/R2012b/bin"
+
 # set java home for hadoop
 export JAVA_HOME="/usr"
 
@@ -55,7 +58,7 @@ PS1="[\[\033[1;32m\]\w\[\033[0m\]] \[\033[0m\]\[\033[1;36m\]\$(git_branch)\[\033
 alias rm='rm -i'
 alias cp='cp -i'
 alias mkdir='mkdir -p'
-
+alias ll='ls -l'
 alias h='history'
 alias j='jobs -l'
 alias path='echo -e ${PATH//:/\\n}'

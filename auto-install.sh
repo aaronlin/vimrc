@@ -19,7 +19,8 @@ git submodule update
 cd ..
 
 ln -s ~/.vim/vimrc ~/.vimrc
-ln -s ~/.vim/bash_profile ~/.bash_profile
+if [ -f ~/.bashrc ] then mv ~/.bashrc ~/.bashrc.bak fi
+ln -s ~/.vim/bashrc ~/.bashrc
 ln -s ~/.vim/screenrc ~/.screenrc
 ln -s ~/.vim/gitconfig ~/.gitconfig
 
