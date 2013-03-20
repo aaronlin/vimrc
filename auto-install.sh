@@ -20,6 +20,7 @@ cd ..
 
 ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/bashrc ~/.bashrc
+ln -s ~/.vim/bashrc ~/.bash_profile
 ln -s ~/.vim/screenrc ~/.screenrc
 ln -s ~/.vim/gitconfig ~/.gitconfig
 
