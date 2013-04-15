@@ -28,9 +28,6 @@ let mapleader = ","
 " python highlight on
 let python_highlight_all=1
 
-" use click to jump cursor by mouse
-set mouse=a
-
 " automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
