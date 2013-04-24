@@ -71,6 +71,11 @@ map <C-t><C-w> :tabclose<CR>
 " python highlight on for 'python.vim'
 let python_highlight_all=1
 
+" python tidy setting
+" use it carefully since it changes the saved file
+" if you want to undo it, press 'u' and 'w' to save the unchanged version
+map <F4> :!python ~/.vim/PythonTidy-1.22.python % %<CR><CR>
+
 
 """""""""""""""""""""
 " module management "
