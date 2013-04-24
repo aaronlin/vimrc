@@ -33,6 +33,15 @@ Add a new plugin:
     git commit -m "[comment]"
     git push
 
+Remove a plugin:
+
+    Delete the relevant section from the .gitmodules file.
+    Delete the relevant section from .git/config.
+    Run git rm --cached path_to_submodule (no trailing slash).
+    Commit
+    Delete the now untracked submodule files
+    rm -rf path_to_submodule
+
 Update submodule
 
     git submodule update
