@@ -1,3 +1,6 @@
+" set leader key
+let mapleader=","
+
 " set nocompatible first
 set nocompatible
 
