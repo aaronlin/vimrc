@@ -13,8 +13,10 @@ set cursorline
 set number
 set hlsearch
 set ruler
-set colorcolumn=80
-highlight ColorColumn ctermbg=233
+if v:version >= 703
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=233
+endif
 
 " set the behaviors of tab and expand tab
 set autoindent
