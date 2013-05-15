@@ -99,7 +99,9 @@ set wildignore+=*/coverage/*
 " settings for NERDTree
 map <F3> :NERDTreeToggle<CR>
 
-" python autocomplete
+" settings for python autocomplete
 filetype plugin indent on
-let g:pydiction_location = '/Users/aaronlin/.vim/bundle/pydiction/complete-dict'
+let g:pydiction_location = '$HOME/.vim/bundle/pydiction/complete-dict'
 
+" settings for easymotion
+let g:EasyMotion_leader_key = '<Leader>'
