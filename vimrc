@@ -86,9 +86,20 @@ map <F4> :!python ~/.vim/PythonTidy-1.22.python % %<CR><CR>
 " module management "
 """""""""""""""""""""
 
-" set up pathogen first to manage vim plugins
-call pathogen#infect()
-call pathogen#helptags()
+" use vundle to manage modules
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-easymotion'
+
+filetype plugin indent on    " required for vundle
 
 " settings for ctrlp, use ctrl+p to start fuzzy search for file
 let g:ctrlp_max_height = 30
@@ -99,9 +110,6 @@ set wildignore+=*/coverage/*
 " settings for NERDTree
 map <F3> :NERDTreeToggle<CR>
 
-" settings for python autocomplete
-filetype plugin indent on
-let g:pydiction_location = '$HOME/.vim/bundle/pydiction/complete-dict'
-
 " settings for easymotion
 let g:EasyMotion_leader_key = '<Leader>'
+
