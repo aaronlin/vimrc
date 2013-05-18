@@ -98,6 +98,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on    " required for vundle
 
