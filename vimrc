@@ -86,6 +86,18 @@ map <F4> :!python ~/.vim/PythonTidy-1.22.python % %<CR><CR>
 " module management "
 """""""""""""""""""""
 
+" http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+" Automatic set up Vundle - the vim plugin bundler
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing Vundle.."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+    let iCanHazVundle=0
+endif
+
 " use vundle to manage modules
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -101,6 +113,13 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'pyflakes.vim'
 
+if iCanHazVundle == 0
+  echo "Installing Bundles, please ignore key map error messages"
+  echo ""
+  :BundleInstall
+endif
+" Setting up Vundle - the vim plugin bundler end
+
 filetype plugin indent on    " required for vundle
 
 " settings for ctrlp, use ctrl+p to start fuzzy search for file
@@ -114,4 +133,3 @@ map <F3> :NERDTreeToggle<CR>
 
 " settings for easymotion
 let g:EasyMotion_leader_key = '<Leader>'
-
