@@ -1,24 +1,17 @@
-ONE-STEP INSTALL
-----------------
-
-wget (for most Unix)
-
-    wget -O - https://raw.github.com/aaronlin/vimrc/master/auto-install.sh | sh
-
-or curl (for MAC OSX)
-
-    curl -o - https://raw.github.com/aaronlin/vimrc/master/auto-install.sh | sh
-
-
 MANUALLY INSTALL
 ----------------
 
+Requirement:
+
+    vim version 7.584 or later
+
 Installation:
 
-    git clone https://github.com/aaronlin/vimrc ~/.vim
-    cd .vim
-    git submodule init
-    git submodule update
+    `git clone https://github.com/aaronlin/vimrc ~/.vim`
+    `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
+    enter vim and type `:BundleInstall`
+    `cd ~/.vim/bundle/YouCompleteMe`
+    `./install.sh`
 
 Create symlinks:
 
@@ -29,19 +22,15 @@ Create symlinks:
 
 Add a new plugin:
 
-    git submodule add [git_url] bundle/[plugin_name]
-    git commit -m "[comment]"
-    git push
+    add `Bundle 'github repository name'' to vimrc
+    enter vim and type `:BundleInstall'
 
 Remove a plugin:
 
-    Delete the relevant section from the .gitmodules file.
-    Delete the relevant section from .git/config.
-    Run git rm --cached path_to_submodule (no trailing slash).
-    Commit
-    Delete the now untracked submodule files
-    rm -rf path_to_submodule
+    del the line of `Bundle 'target removed repository name'' in vim
+    enter vim and type `:BundleClear'
+    remove the directory in .vim/bundle
 
 Update submodule
 
-    git submodule update
+    enter vim and type `:BundleInstall'
