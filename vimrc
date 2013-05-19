@@ -99,6 +99,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'pyflakes.vim'
 
 filetype plugin indent on    " required for vundle
 
