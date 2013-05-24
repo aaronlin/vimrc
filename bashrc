@@ -1,6 +1,9 @@
 # add path for matlab
 export PATH="$PATH:/usr/local/MATLAB/R2012b/bin"
 
+# add path for kkbox-script
+export PATH="$PATH:$HOME/kkbox-script/kkutil/"
+
 # set java home for hadoop
 export JAVA_HOME="/usr"
 
