@@ -21,7 +21,7 @@ if v:version >= 703
     highlight ColorColumn ctermbg=233
 endif
 
-" set the behaviors of tab and expand tab
+" set the format of tab and expand tab
 set autoindent
 set smartindent
 set shiftwidth=4
@@ -29,6 +29,12 @@ set tabstop=4
 set softtabstop=4
 set shiftround
 set expandtab
+
+" keep the cursor in the middle of the vertical screen
+map <up> <up>zz
+map <down> <down>zz
+map <PageUp> <PageUp>zz
+map <PageDown> <PageDown>zz
 
 " vim other setting
 syntax on
@@ -43,8 +49,8 @@ autocmd! bufwritepost .vimrc source %
 
 " set hlresearch behaviors
 autocmd cursorhold * set nohlsearch
-noremap n :set hlsearch<cr>n
-noremap N :set hlsearch<cr>N
+noremap n :set hlsearch<cr>nzz
+noremap N :set hlsearch<cr>Nzz
 noremap / :set hlsearch<cr>/
 noremap ? :set hlsearch<cr>?
 
