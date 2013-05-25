@@ -110,8 +110,12 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'pyflakes.vim'
+
+" plugin for autocomplete
+Bundle 'AutoComplPop'
+Bundle 'msanders/snipmate.vim'
+" Bundle 'Valloric/YouCompleteMe'
 
 if iCanHazVundle == 0
   echo "Installing Bundles, please ignore key map error messages"
@@ -133,3 +137,6 @@ map <F3> :NERDTreeToggle<CR>
 
 " settings for easymotion
 let g:EasyMotion_leader_key = '<Leader>'
+
+" settings for AutoComplPop + snipMate
+let g:acp_behaviorSnipmateLength=1
