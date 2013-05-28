@@ -17,19 +17,11 @@ if [ "$TERM" != "dumb" ]; then
         alias ls='ls -GhF'
         export LSCOLORS=dxfxcxdxbxegedabagacad
         
-        # set these for numpy
-        PYTHONPATH="/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/"
-        export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-        
         # for brew settings
         . $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 
         # set these for overcoming some warnings in brew doctor
         export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-        # Setting PATH for Python 2.7
-        # The orginal version is saved in .bash_profile.pysave
-        export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
     fi
     export CLICOLOR=1
 fi
