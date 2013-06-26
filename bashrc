@@ -1,3 +1,7 @@
+# add path for hadoop
+export PATH="$PATH:/usr/local/hadoop/bin/"
+HADOOP_HOME="/usr/local/hadoop/"
+
 # add path for matlab
 export PATH="$PATH:/usr/local/MATLAB/R2012b/bin"
 
@@ -5,7 +9,7 @@ export PATH="$PATH:/usr/local/MATLAB/R2012b/bin"
 export PATH="$PATH:$HOME/kkbox-script/kkutil/"
 
 # set java home for hadoop
-export JAVA_HOME="/usr"
+export JAVA_HOME="/usr/lib/jvm/default-java/"
 
 if [ "$TERM" != "dumb" ]; then
     if [ $(uname) == "Linux" ]; then
