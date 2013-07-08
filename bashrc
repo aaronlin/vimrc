@@ -1,6 +1,7 @@
 # add path for hadoop
 export PATH="$PATH:/usr/local/hadoop/bin/"
 export HADOOP_HOME="/usr/local/hadoop/"
+export HADOOP_HOME_WARN_SUPPRESS=1
 
 # add path for matlab
 export PATH="$PATH:/usr/local/MATLAB/R2012b/bin"
