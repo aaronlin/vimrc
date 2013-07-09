@@ -87,6 +87,9 @@ let python_highlight_all=1
 " if you want to undo it, press 'u' and 'w' to save the unchanged version
 map <F4> :!python ~/.vim/PythonTidy-1.22.python % %<CR><CR>
 
+" set for python folding
+set foldmethod=indent
+nnoremap <space> za
 
 """""""""""""""""""""
 " module management "

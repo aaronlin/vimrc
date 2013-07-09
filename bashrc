@@ -1,27 +1,31 @@
-# add path for hadoop
-export PATH="$PATH:/usr/local/hadoop/bin/"
-export HADOOP_HOME="/usr/local/hadoop/"
-export HADOOP_HOME_WARN_SUPPRESS=1
-
-# add path for matlab
-export PATH="$PATH:/usr/local/MATLAB/R2012b/bin"
-
 # add path for kkbox-script
 export PATH="$PATH:$HOME/kkbox-script/kkutil/"
 
-# set java home for hadoop
-export JAVA_HOME="/usr/lib/jvm/default-java/"
 
 if [ "$TERM" != "dumb" ]; then
     if [ $(uname) == "Linux" ]; then
         # Linux
+        # add path for matlab
+        export PATH="$PATH:/usr/local/MATLAB/R2012b/bin"
+
+        # add path for hadoop
+        export PATH="$PATH:/usr/local/hadoop/bin/"
+        export HADOOP_HOME="/usr/local/hadoop/"
+        export HADOOP_HOME_WARN_SUPPRESS=1
+
+        # set java home for hadoop
+        export JAVA_HOME="/usr/lib/jvm/default-java/"
+
         alias ls='ls --color=auto'
         LS_COLORS='di=33:fi=0:ln=95:pi=5:so=5:cd=5:or=37:mi=0:ex=31'
     else
         # OS X
+        # add path for matlab
+        export PATH="$PATH:/Applications/MATLAB_R2011b.app/bin"
+
         alias ls='ls -GhF'
         export LSCOLORS=dxfxcxdxbxegedabagacad
-        
+
         # for brew settings
         . $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 
