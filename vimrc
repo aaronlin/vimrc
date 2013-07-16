@@ -121,6 +121,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'pyflakes.vim'
 Bundle 'EnhCommentify.vim'
+Bundle 'vim-autopep8'
 
 " plugin for autocomplete
 Bundle 'AutoComplPop'
