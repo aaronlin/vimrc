@@ -1,3 +1,6 @@
+# change umask for cooperation
+umask 002
+
 # add path for kkbox-script
 export PATH="$PATH:$HOME/kkbox-script/kkutil"
 
