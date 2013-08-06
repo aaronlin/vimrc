@@ -1,9 +1,18 @@
-MANUALLY INSTALL
+One-Step INSTALL
 ----------------
 
-Requirement:
+Installation:
 
-    vim version 7.584 or later
+wget (for most Unix)
+
+    wget -O - https://raw.github.com/aaronlin/vimrc/master/auto-install.sh | sh
+
+or curl (for MAC OSX)
+
+    curl -o - https://raw.github.com/aaronlin/vimrc/master/auto-install.sh | sh
+
+MANUALLY INSTALL
+----------------
 
 Installation:
 
