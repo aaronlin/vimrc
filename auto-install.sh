@@ -13,15 +13,13 @@ die() {
 [ -e "~/.vimrc" ] && die "~/.vimrc already exists."
 
 git clone git://github.com/aaronlin/vimrc.git ~/.vim
-cd .vim
-git submodule init
-git submodule update
-cd ..
 
 ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/bashrc ~/.bashrc
 ln -s ~/.vim/bashrc ~/.bash_profile
 ln -s ~/.vim/screenrc ~/.screenrc
 ln -s ~/.vim/gitconfig ~/.gitconfig
+
+vi
 
 echo "vimrc is installed."
