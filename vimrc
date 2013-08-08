@@ -86,6 +86,10 @@ let python_highlight_all=1
 set foldmethod=indent
 nnoremap <space> za
 
+" fast insert debug trace for python
+nnoremap <leader>d Oimport pdb; pdb.set_trace()
+
+
 """""""""""""""""""""
 " module management "
 """""""""""""""""""""
