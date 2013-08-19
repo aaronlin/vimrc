@@ -19,6 +19,10 @@ if [ "$TERM" != "dumb" ]; then
         export HADOOP_HOME="/usr/local/hadoop/"
         export HADOOP_HOME_WARN_SUPPRESS=1
 
+        # add path for pig
+        export PIG_INSTALL="/usr/local/pig"
+        export PATH="$PATH:$PIG_INSTALL/bin"
+
         # set java home for hadoop
         export JAVA_HOME="/usr/lib/jvm/default-java/"
 
