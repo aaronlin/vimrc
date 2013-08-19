@@ -4,6 +4,9 @@ umask 002
 # add path for kkbox-script
 export PATH="$PATH:$HOME/kkbox-script/kkutil"
 
+# add path for elastic-mapreduce cli interface
+export PATH="$PATH:$HOME/software/elastic-mapreduce-cli"
+
 
 if [ "$TERM" != "dumb" ]; then
     if [ $(uname) == "Linux" ]; then
@@ -15,6 +18,10 @@ if [ "$TERM" != "dumb" ]; then
         export PATH="$PATH:/usr/local/hadoop/bin/"
         export HADOOP_HOME="/usr/local/hadoop/"
         export HADOOP_HOME_WARN_SUPPRESS=1
+
+        # add path for pig
+        export PIG_INSTALL="/usr/local/pig"
+        export PATH="$PATH:$PIG_INSTALL/bin"
 
         # set java home for hadoop
         export JAVA_HOME="/usr/lib/jvm/default-java/"
