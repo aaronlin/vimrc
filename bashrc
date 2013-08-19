@@ -4,6 +4,9 @@ umask 002
 # add path for kkbox-script
 export PATH="$PATH:$HOME/kkbox-script/kkutil"
 
+# add path for elastic-mapreduce cli interface
+export PATH="$PATH:$HOME/software/elastic-mapreduce-cli"
+
 
 if [ "$TERM" != "dumb" ]; then
     if [ $(uname) == "Linux" ]; then
