@@ -14,6 +14,12 @@ if [ "$TERM" != "dumb" ]; then
         # add path for matlab
         export PATH="$PATH:/usr/local/MATLAB/R2012b/bin"
 
+        # add path for scala
+        export PATH="$PATH:/usr/local/scala/bin/"
+
+        # add path for spark
+        export PATH="$PATH:/usr/local/spark"
+
         # add path for hadoop
         export PATH="$PATH:/usr/local/hadoop/bin/"
         export HADOOP_HOME="/usr/local/hadoop/"
@@ -24,7 +30,7 @@ if [ "$TERM" != "dumb" ]; then
         export PATH="$PATH:$PIG_INSTALL/bin"
 
         # set java home for hadoop
-        export JAVA_HOME="/usr/lib/jvm/default-java/"
+        export JAVA_HOME="/usr/local/java/"
 
         alias ls='ls --color=auto'
         LS_COLORS='di=33:fi=0:ln=95:pi=5:so=5:cd=5:or=37:mi=0:ex=31'
