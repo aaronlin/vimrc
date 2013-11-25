@@ -12,7 +12,7 @@ if [ "$TERM" != "dumb" ]; then
     if [ $(uname) == "Linux" ]; then
         # Linux
         # add path for matlab
-        export PATH="$PATH:/usr/local/MATLAB/R2012b/bin"
+        export PATH="$PATH:/usr/local/MATLAB/R2013b/bin"
 
         # add path for scala
         export PATH="$PATH:/usr/local/scala/bin/"
@@ -86,6 +86,6 @@ alias h='history'
 alias j='jobs -l'
 alias path='echo -e ${PATH//:/\\n}'
 alias df='df -kh'
-
+alias grep='grep --color'
 
 
