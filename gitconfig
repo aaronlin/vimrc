@@ -13,7 +13,7 @@
     rt = reset --hard
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
-    l = log --pretty=oneline --abbrev-commit --graph --decorate
+    l = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     g = grep -n --color -E
     nb = checkout -b
     amend = commit --amend
