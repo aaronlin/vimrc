@@ -7,7 +7,7 @@ set nocompatible
 " set encodings
 set encoding=utf8
 set termencoding=utf8
-set fileencodings=utf-8,cp950,gb2312,big5,ucs-bom
+set fileencodings=utf-8,cp950,gb2312,big5,ucs-bom,sjis,default
 
 " display setting
 set showmatch

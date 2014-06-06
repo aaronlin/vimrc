@@ -30,7 +30,10 @@ if [ "$TERM" != "dumb" ]; then
         export PATH="$PATH:$PIG_INSTALL/bin"
 
         # set java home for hadoop
-        export JAVA_HOME="/usr/local/java/"
+        export JAVA_HOME="/usr/lib/jvm/default-java"
+
+        # set elastic-mapreduce tool
+        export PATH="$PATH:/net/account/users/aaronlin/software/elastic-mapreduce-ruby/"
 
         alias ls='ls --color=auto'
         LS_COLORS='di=33:fi=0:ln=95:pi=5:so=5:cd=5:or=37:mi=0:ex=31'
