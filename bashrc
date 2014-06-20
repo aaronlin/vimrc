@@ -42,9 +42,6 @@ if [ "$TERM" != "dumb" ]; then
         # add path for matlab
         export PATH="$PATH:/Applications/MATLAB_R2011b.app/bin"
 
-        # add path for ipython
-        export PATH="$PATH:/usr/local/share/python"
-
         alias ls='ls -GhF'
         export LSCOLORS=dxfxcxdxbxegedabagacad
 

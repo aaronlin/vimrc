@@ -44,3 +44,11 @@ Remove a plugin:
 Update submodule
 
     enter vim and type `:BundleInstall'
+
+
+FAQ
+----------------
+
+snipmate.vim Error:
+
+    check out ~/.vim/bundle/AutoComplPop/README to find out how to solve it
