@@ -1,6 +1,9 @@
 # change umask for cooperation
 umask 002
 
+# add path for self specific executions
+export PATH="$PATH:$HOME/bin"
+
 # add path for kkbox-script
 export PATH="$PATH:$HOME/kkbox-script/kkutil"
 
