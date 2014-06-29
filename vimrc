@@ -109,32 +109,34 @@ endif
 " use vundle to manage modules
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+call vundle#begin()
+Plugin 'gmarik/vundle'
 
-" My Bundles here:
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'pyflakes.vim'
-Bundle 'EnhCommentify.vim'
-Bundle 'vim-autopep8'
-Bundle 'motus/pig.vim'
+" My Plugins here:
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'pyflakes.vim'
+Plugin 'EnhCommentify.vim'
+Plugin 'vim-autopep8'
+Plugin 'motus/pig.vim'
 
 " plugin for autocomplete
-Bundle 'AutoComplPop'
-Bundle 'msanders/snipmate.vim'
-" Bundle 'Valloric/YouCompleteMe'
+Plugin 'AutoComplPop'
+Plugin 'msanders/snipmate.vim'
+" Plugin 'Valloric/YouCompleteMe'
+
 
 if iCanHazVundle == 0
-  echo "Installing Bundles, please ignore key map error messages"
+  echo "Installing Plugins, please ignore key map error messages"
   echo ""
-  :BundleInstall
+  :PluginInstall
 endif
 " Setting up Vundle - the vim plugin bundler end
 
+call vundle#end()
 filetype plugin indent on    " required for vundle
 
 " settings for ctrlp, use ctrl+p to start fuzzy search for file
