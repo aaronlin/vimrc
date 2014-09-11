@@ -4,12 +4,10 @@ umask 002
 # add path for self specific executions
 export PATH="$PATH:$HOME/bin"
 
-# add path for kkbox-script
-export PATH="$PATH:$HOME/kkbox-script/kkutil"
+export PATH="$PATH:$HOME/git/company/kkbox-script/kkutil"
 
 # add path for elastic-mapreduce cli interface
-export PATH="$PATH:$HOME/software/elastic-mapreduce-cli"
-
+export PATH="$PATH:$HOME/git/software/elastic-mapreduce-ruby"
 
 if [ "$TERM" != "dumb" ]; then
     if [ $(uname) == "Linux" ]; then
@@ -45,6 +43,10 @@ if [ "$TERM" != "dumb" ]; then
         # add path for matlab
         export PATH="$PATH:/Applications/MATLAB_R2011b.app/bin"
 
+        export SCALA_HOME="/usr/local/scala"
+        export PATH="$PATH:$SCALA_HOME/bin"
+        export PATH="$PATH:$SCALA_HOME/ec2"
+
         alias ls='ls -GhF'
         export LSCOLORS=dxfxcxdxbxegedabagacad
 
@@ -56,6 +58,9 @@ if [ "$TERM" != "dumb" ]; then
     fi
     export CLICOLOR=1
 fi
+
+# add gitignore generator function
+function gi() { curl http://www.gitignore.io/api/$@ ;}
 
 
 # command line coloring for git
