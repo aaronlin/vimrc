@@ -9,6 +9,8 @@ export PATH="$PATH:$HOME/git/company/kkbox-script/kkutil"
 # add path for elastic-mapreduce cli interface
 export PATH="$PATH:$HOME/git/software/elastic-mapreduce-ruby"
 
+source "$HOME/.vim/aws.conf"
+
 if [ "$TERM" != "dumb" ]; then
     if [ $(uname) == "Linux" ]; then
         # Linux
