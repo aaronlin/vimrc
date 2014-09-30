@@ -47,7 +47,7 @@ if [ "$TERM" != "dumb" ]; then
 
         export SCALA_HOME="/usr/local/scala"
         export PATH="$PATH:$SCALA_HOME/bin"
-        export PATH="$PATH:$SCALA_HOME/ec2"
+        export PATH="$PATH:$HOME/spark/ec2"
 
         alias ls='ls -GhF'
         export LSCOLORS=dxfxcxdxbxegedabagacad
