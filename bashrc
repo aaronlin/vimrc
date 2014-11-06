@@ -47,7 +47,9 @@ if [ "$TERM" != "dumb" ]; then
 
         export SCALA_HOME="/usr/local/scala"
         export PATH="$PATH:$SCALA_HOME/bin"
-        export PATH="$PATH:$HOME/spark/ec2"
+        export SPARK_HOME="/usr/local/spark"
+        export PATH="$PATH:$SPARK_HOME/bin"
+        export PATH="$PATH:$SPARK_HOME/ec2"
 
         alias ls='ls -GhF'
         export LSCOLORS=dxfxcxdxbxegedabagacad
@@ -99,3 +101,6 @@ alias df='df -kh'
 alias grep='grep --color'
 
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
