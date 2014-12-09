@@ -42,8 +42,8 @@ if [ "$TERM" != "dumb" ]; then
         LS_COLORS='di=33:fi=0:ln=95:pi=5:so=5:cd=5:or=37:mi=0:ex=31'
     else
         # OS X
-        # add path for matlab
-        export PATH="$PATH:/Applications/MATLAB_R2011b.app/bin"
+        # add path for pip
+        export PATH="$PATH:/usr/local/share/python"
 
         export SCALA_HOME="/usr/local/scala"
         export PATH="$PATH:$SCALA_HOME/bin"
