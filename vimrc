@@ -122,6 +122,8 @@ Plugin 'pyflakes.vim'
 Plugin 'EnhCommentify.vim'
 Plugin 'vim-autopep8'
 Plugin 'motus/pig.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'plasticboy/vim-markdown'
 
 " plugin for autocomplete
 Plugin 'AutoComplPop'
