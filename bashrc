@@ -59,6 +59,9 @@ if [ "$TERM" != "dumb" ]; then
 
         # set these for overcoming some warnings in brew doctor
         export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+        # add gpsbabelfe
+        export PATH="$PATH:/Applications/GPSBabelFE.app/Contents/MacOS/"
     fi
     export CLICOLOR=1
 fi
