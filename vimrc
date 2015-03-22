@@ -124,6 +124,7 @@ Plugin 'vim-autopep8'
 Plugin 'motus/pig.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'chrisbra/vim-diff-enhanced'
 
 " plugin for autocomplete
 Plugin 'AutoComplPop'
