@@ -5,6 +5,10 @@
     ui = true
 [merge]
     tool = opendiff
+[diff]
+    tool = icdiff
+[difftool "icdiff"]
+    cmd = icdiff $LOCAL $REMOTE
 [alias]
     co = checkout
     ci = commit

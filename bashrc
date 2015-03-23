@@ -63,8 +63,10 @@ if [ "$TERM" != "dumb" ]; then
         # add gpsbabelfe
         export PATH="$PATH:/Applications/GPSBabelFE.app/Contents/MacOS/"
 
-        # add activator
-        export PATH="$PATH:/usr/local/activator/"
+
+        # add path for activator
+        export PATH="/Users/aaronlin/software/activator-1.3.2-minimal:$PATH"
+        export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
     fi
     export CLICOLOR=1
 fi
