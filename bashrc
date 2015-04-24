@@ -3,8 +3,11 @@ umask 002
 
 # add path for self specific executions
 export PATH="$PATH:$HOME/bin"
-
 export PATH="$PATH:$HOME/git/company/kkbox-script/kkutil"
+
+# extend history to unlimit size
+export HISTFILESIZE=
+export HISTSIZE=
 
 # add path for elastic-mapreduce cli interface
 export PATH="$PATH:$HOME/git/software/elastic-mapreduce-ruby"
