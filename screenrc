@@ -1,3 +1,5 @@
+term screen-256color
+
 # 設定每個視窗的標題
 caption always "%{= wk} %{= KY} [%n]%t @ %H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
 

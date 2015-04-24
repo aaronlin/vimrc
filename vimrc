@@ -125,6 +125,7 @@ Plugin 'motus/pig.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'chrisbra/vim-diff-enhanced'
+Plugin 'rainux/vim-desert-warm-256'
 
 " plugin for autocomplete
 Plugin 'AutoComplPop'
