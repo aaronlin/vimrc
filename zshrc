@@ -56,8 +56,8 @@ plugins=(git)
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-source $HOME/.vim/aws.conf
-source $HOME/.vim/spark.conf
+[ -f $HOME/.vim/aws.conf ] && source $HOME/.vim/aws.conf
+[ -f $HOME/.vim/spark.conf ] && source ~/.vim/spark.conf
 
 if [ "$TERM" != "dumb" ]; then
     if [ $(uname) = "Linux" ]; then
