@@ -1,3 +1,6 @@
+# set encoding
+export LANG=en_US.UTF-8
+
 # change umask for cooperation
 umask 002
 
