@@ -21,29 +21,12 @@ source "$HOME/.vim/spark.conf"
 if [ "$TERM" != "dumb" ]; then
     if [ $(uname) == "Linux" ]; then
         # Linux
-        # add path for matlab
-        export PATH="$PATH:/usr/local/MATLAB/R2013b/bin"
 
         # add path for scala
         export PATH="$PATH:/usr/local/scala/bin/"
 
         # add path for spark
         export PATH="$PATH:/usr/local/spark"
-
-        # add path for hadoop
-        export PATH="$PATH:/usr/local/hadoop/bin/"
-        export HADOOP_HOME="/usr/local/hadoop/"
-        export HADOOP_HOME_WARN_SUPPRESS=1
-
-        # add path for pig
-        export PIG_INSTALL="/usr/local/pig"
-        export PATH="$PATH:$PIG_INSTALL/bin"
-
-        # set java home for hadoop
-        export JAVA_HOME="/usr/lib/jvm/default-java"
-
-        # set elastic-mapreduce tool
-        export PATH="$PATH:/net/account/users/aaronlin/software/elastic-mapreduce-ruby/"
 
         alias ls='ls --color=auto'
         LS_COLORS='di=33:fi=0:ln=95:pi=5:so=5:cd=5:or=37:mi=0:ex=31'
@@ -69,11 +52,6 @@ if [ "$TERM" != "dumb" ]; then
 
         # add gpsbabelfe
         export PATH="$PATH:/Applications/GPSBabelFE.app/Contents/MacOS/"
-
-
-        # add path for activator
-        export PATH="/Users/aaronlin/software/activator-1.3.2-minimal:$PATH"
-        export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
     fi
     export CLICOLOR=1
 fi

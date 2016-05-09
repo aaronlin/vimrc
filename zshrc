@@ -120,6 +120,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias vi=vim
 alias rm='rm -i'
 alias cp='cp -i'
 alias mkdir='mkdir -p'
