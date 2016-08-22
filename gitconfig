@@ -32,6 +32,10 @@
     # only push branches that have been
     # set up to track a remote branch.
     default = current
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
 [core]
     editor = vim
 	autocrlf = input

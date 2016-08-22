@@ -52,6 +52,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins=(zsh-autosuggestions)
 
 # User configuration
 
@@ -77,12 +78,16 @@ if [ "$TERM" != "dumb" ]; then
         export SPARK_HOME="/usr/local/spark"
         export PATH="$PATH:$SPARK_HOME/bin"
         export PATH="$PATH:$SPARK_HOME/ec2"
+        export PATH="$PATH:/Users/aaronlin/bin"
 
         # add gpsbabelfe
         export PATH="$PATH:/Applications/GPSBabelFE.app/Contents/MacOS/"
 
         # add path to jira cli
         alias jira='/usr/local/atlassian-cli-4.4.0/jira.sh'
+
+        # add path for anaconda
+        export PATH="/Users/aaronlin/anaconda/bin:$PATH"
     fi
 fi
 
