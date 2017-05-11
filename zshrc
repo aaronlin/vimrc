@@ -136,3 +136,4 @@ alias path='echo -e ${PATH//:/\\n}'
 alias df='df -kh'
 alias grep='grep --color'
 alias git-prune="git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print \$1}' | xargs git branch -d"
+export PYTHONPATH=:$PYTHONPATH

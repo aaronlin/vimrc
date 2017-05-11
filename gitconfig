@@ -28,6 +28,7 @@
     addall = !sh -c 'git add . && git add -u'
     merge = merge -e
     fetch = fetch -p
+    pull = pull --prune
 [push]
     # only push branches that have been
     # set up to track a remote branch.
@@ -39,3 +40,7 @@
 [core]
     editor = vim
 	autocrlf = input
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	required = true
+	clean = git-lfs clean -- %f
