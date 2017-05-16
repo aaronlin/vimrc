@@ -79,6 +79,7 @@ if [ "$TERM" != "dumb" ]; then
         export PATH="$PATH:$SPARK_HOME/bin"
         export PATH="$PATH:$SPARK_HOME/ec2"
         export PATH="$PATH:/Users/aaronlin/bin"
+        export PATH="$PATH:/Users/aaronlin/.local/bin"
 
         # add gpsbabelfe
         export PATH="$PATH:/Applications/GPSBabelFE.app/Contents/MacOS/"
@@ -87,7 +88,9 @@ if [ "$TERM" != "dumb" ]; then
         alias jira='/usr/local/atlassian-cli-4.4.0/jira.sh'
 
         # add path for anaconda
-        export PATH="/Users/aaronlin/anaconda/bin:$PATH"
+        export PATH="/anaconda/bin:$PATH"
+
+        export PATH="$PATH:/usr/local/mysql/bin"
     fi
 fi
 
