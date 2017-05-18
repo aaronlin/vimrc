@@ -37,6 +37,7 @@
 	log = diff-highlight | less
 	show = diff-highlight | less
 	diff = diff-highlight | less
+    clean-local = git branch | grep -v master | grep -v staging | xargs -I {} git branch -d {}
 [core]
     editor = vim
 	autocrlf = input
