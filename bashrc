@@ -100,3 +100,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # added by Anaconda3 4.0.0 installer
 export PATH="/Users/aaronlin/anaconda/bin:$PATH"
+
+# added by Anaconda3 4.3.1 installer
+export PATH="/anaconda/bin:$PATH"

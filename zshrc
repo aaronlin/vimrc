@@ -65,9 +65,6 @@ if [ "$TERM" != "dumb" ]; then
         # Linux
         export SCALA_HOME="/usr/local/scala"
         export PATH="$PATH:$SCALA_HOME/bin"
-        export SPARK_HOME="/usr/local/spark"
-        export PATH="$PATH:$SPARK_HOME/bin"
-        export PATH="$PATH:$SPARK_HOME/ec2"
 
         alias ls='ls --color=auto'
         LS_COLORS='di=33:fi=0:ln=95:pi=5:so=5:cd=5:or=37:mi=0:ex=31'
@@ -75,9 +72,6 @@ if [ "$TERM" != "dumb" ]; then
         # OS X
         export SCALA_HOME="/usr/local/scala"
         export PATH="$PATH:$SCALA_HOME/bin"
-        export SPARK_HOME="/usr/local/spark"
-        export PATH="$PATH:$SPARK_HOME/bin"
-        export PATH="$PATH:$SPARK_HOME/ec2"
         export PATH="$PATH:/Users/aaronlin/bin"
         export PATH="$PATH:/Users/aaronlin/.local/bin"
 

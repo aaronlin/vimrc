@@ -1,6 +1,6 @@
 [user]
-    name = aaronlin
-    email = aaron.lin@appier.com
+	name = aaronlin
+	email = aaron.lin@appier.com
 [color]
     ui = true
 [merge]
@@ -28,11 +28,12 @@
     addall = !sh -c 'git add . && git add -u'
     merge = merge -e
     fetch = fetch -p
-    pull = pull --prune
 [push]
     # only push branches that have been
     # set up to track a remote branch.
     default = current
+[fetch]
+    prune = true
 [pager]
 	log = diff-highlight | less
 	show = diff-highlight | less
