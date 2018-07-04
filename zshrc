@@ -73,18 +73,12 @@ if [ "$TERM" != "dumb" ]; then
         export SCALA_HOME="/usr/local/scala"
         export PATH="$PATH:$SCALA_HOME/bin"
         export PATH="$PATH:/Users/aaronlin/bin"
-        export PATH="$PATH:/Users/aaronlin/.local/bin"
 
         # add gpsbabelfe
         export PATH="$PATH:/Applications/GPSBabelFE.app/Contents/MacOS/"
 
-        # add path to jira cli
-        alias jira='/usr/local/atlassian-cli-4.4.0/jira.sh'
-
         # add path for anaconda
         export PATH="/anaconda/bin:$PATH"
-
-        export PATH="$PATH:/usr/local/mysql/bin"
     fi
 fi
 
@@ -94,6 +88,11 @@ export HISTSIZE=
 
 # add gitignore generator function
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
+# added by Anaconda3 5.2.0 installer
+export PATH="/anaconda3/bin:$PATH"
+
+export AIRFLOW_HOME=~/airbnb/airflow
 
 source $ZSH/oh-my-zsh.sh
 
@@ -133,4 +132,5 @@ alias path='echo -e ${PATH//:/\\n}'
 alias df='df -kh'
 alias grep='grep --color'
 alias git-prune="git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print \$1}' | xargs git branch -d"
+
 export PYTHONPATH=:$PYTHONPATH

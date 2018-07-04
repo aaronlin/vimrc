@@ -32,9 +32,9 @@
 [fetch]
     prune = true
 [pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
+	log = /usr/local/var/homebrew/linked/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+	show = /usr/local/var/homebrew/linked/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+	diff = /usr/local/var/homebrew/linked/git/share/git-core/contrib/diff-highlight/diff-highlight | less
     clean-local = git branch | grep -v master | grep -v staging | xargs -I {} git branch -d {}
 [core]
     editor = vim
