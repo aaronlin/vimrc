@@ -103,3 +103,7 @@ export PATH="/Users/aaronlin/anaconda/bin:$PATH"
 
 # added by Anaconda3 4.3.1 installer
 export PATH="/anaconda/bin:$PATH"
+
+function ssh () {
+    /usr/bin/ssh -t $@ "tmux attach || tmux new"
+}

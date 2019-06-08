@@ -32,18 +32,22 @@
 [fetch]
     prune = true
 [pager]
-	log = /usr/local/var/homebrew/linked/git/share/git-core/contrib/diff-highlight/diff-highlight | less
-	show = /usr/local/var/homebrew/linked/git/share/git-core/contrib/diff-highlight/diff-highlight | less
-	diff = /usr/local/var/homebrew/linked/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+    log = /usr/local/var/homebrew/linked/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+    show = /usr/local/var/homebrew/linked/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+    diff = /usr/local/var/homebrew/linked/git/share/git-core/contrib/diff-highlight/diff-highlight | less
     clean-local = git branch | grep -v master | grep -v staging | xargs -I {} git branch -d {}
 [core]
     editor = vim
-	autocrlf = input
+    autocrlf = input
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	required = true
-	clean = git-lfs clean -- %f
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    smudge = git-lfs smudge -- %f
+    required = true
+    clean = git-lfs clean -- %f
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[user]
+    email = aaron.lin@airbnb.com
+[hub]
+    host = git.musta.ch

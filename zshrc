@@ -69,16 +69,21 @@ if [ "$TERM" != "dumb" ]; then
         alias ls='ls --color=auto'
         LS_COLORS='di=33:fi=0:ln=95:pi=5:so=5:cd=5:or=37:mi=0:ex=31'
     else
-        # OS X
-        export SCALA_HOME="/usr/local/scala"
-        export PATH="$PATH:$SCALA_HOME/bin"
-        export PATH="$PATH:/Users/aaronlin/bin"
-
         # add gpsbabelfe
         export PATH="$PATH:/Applications/GPSBabelFE.app/Contents/MacOS/"
 
         # add path for anaconda
         export PATH="/anaconda/bin:$PATH"
+
+        # add path for iftop
+        export PATH="/usr/local/sbin:$PATH"
+
+        # add path to awc-mfa
+        export PATH="/Users/aaron_lin/git/airbnb/awc-mfa/bin:$PATH"
+
+        # treehouse setup
+        export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+        export PATH=$JAVA_HOME/bin:$PATH
     fi
 fi
 
@@ -92,7 +97,7 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 # added by Anaconda3 5.2.0 installer
 export PATH="/anaconda3/bin:$PATH"
 
-export AIRFLOW_HOME=~/airbnb/airflow
+export PATH="/Users/aaron_lin/sandbox/chinese-nlp-test/fasttext/fastText-0.1.0:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,6 +126,34 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# hub
+eval "$(hub alias -s)"
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit && compinit
+export GITHUB_HOST=git.musta.ch
+
+# ssh and tmux
+function ssh () {/usr/bin/ssh -t $@ "tmux attach || tmux new";}
+
+# afdev
+export DATA_DIR=$HOME/git/airbnb/data #PATH WHERE YOU CLONED THE DATA REPO
+export AFDEV_HOST=13.229.48.145
+export AFDEV_PORT=65500
+
+# airbnb related
+alias ml-ssh="ssh -N -f -L localhost:8888:localhost:8889 ml-instance"
+alias ml-check="ps aux | grep ml-instance"
+alias mywork-get="rsync -av --delete --exclude '.git' --exclude 'docs/embeddings' --exclude 'docs/.ipynb_checkpoints/' ml-instance:~/git/airbnb/aaron-exp/ ~/git/airbnb/aaron-exp/"
+alias mywork-put="rsync -av --delete --exclude '.git' --exclude 'docs/embeddings' --exclude 'docs/.ipynb_checkpoints/' ~/git/airbnb/aaron-exp/ ml-instance:~/git/airbnb/aaron-exp/"
+alias airflow1="export AFDEV_HOST=13.229.48.145"
+alias airflow2="export AFDEV_HOST=13.250.117.22"
+alias airflow3="export AFDEV_HOST=13.229.120.170"
+alias airflow-silver="export AFDEV_HOST=i-078451d40df2bd96f.inst.aws.airbnb.com"
+alias dg_silver='ssh -N -f -L localhost:5712:presto-coordinator-prod-1.synapse:5712 silver1'
+alias dg='ssh -N -f -L localhost:4161:presto-coordinator-jade.synapse:4161 jade1'
+alias dg_check='ps aux | grep jade1'
+
+# others
 alias vi=vim
 alias rm='rm -i'
 alias cp='cp -i'
@@ -132,5 +165,15 @@ alias path='echo -e ${PATH//:/\\n}'
 alias df='df -kh'
 alias grep='grep --color'
 alias git-prune="git branch -r | awk '{print \$1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print \$1}' | xargs git branch -d"
+alias zshrc="source ~/.zshrc"
+alias git-pr-link="git pr list -h $(git rev-parse --abbrev-ref HEAD) -f '%sC%>(8)%i%Creset %t: %U %n'"
 
-export PYTHONPATH=:$PYTHONPATH
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/aaron_lin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/aaron_lin/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/aaron_lin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/aaron_lin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export GOOGLE_APPLICATION_CREDENTIALS='/Users/aaron_lin/Dropbox/keys/Translation-e37907bbbb09.json'
+
+# libfm
+export PATH="$PATH:/Users/aaron_lin/git/public/libfm/libfm-1.42.src/bin"
