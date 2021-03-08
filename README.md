@@ -29,6 +29,7 @@ Create symlinks:
     ln -s ~/.vim/bashrc ~/.bashrc
     ln -s ~/.vim/screenrc ~/.screenrc
     ln -s ~/.vim/gitconfig ~/.gitconfig
+    ln -s ~/.vim/tmux.conf ~/.tmux.conf
 
 Add a new plugin:
 
