@@ -15,8 +15,9 @@ export HISTSIZE=
 # add path for elastic-mapreduce cli interface
 export PATH="$PATH:$HOME/git/software/elastic-mapreduce-ruby"
 
-source "$HOME/.vim/aws.conf"
-source "$HOME/.vim/spark.conf"
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export PATH=$JAVA_HOME/bin:$PATH
+
 
 if [ "$TERM" != "dumb" ]; then
     if [ $(uname) == "Linux" ]; then
